@@ -1,0 +1,166 @@
+/* Estilos básicos para o corpo e container */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 90%;
+    max-width: 600px;
+}
+
+h1 {
+    color: #333;
+    margin: 20px 0;
+}
+
+/* Estilo para os elementos do formulário */
+.input-section {
+    margin-bottom: 20px;
+}
+
+.input-section label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #555;
+}
+
+.input-section input, 
+.input-section select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-section input:focus, 
+.input-section select:focus {
+    border-color: #4a90e2;
+}
+
+
+button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+    display: inline-block; /* Para que os botões fiquem na mesma linha */
+}
+
+button:hover {
+    background-color: #357ab7;
+}
+
+/* Estilos para o botão de upload personalizado */
+.custom-file-upload {
+    background-color: #4a90e2;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    display: inline-block; /* Para que os botões fiquem na mesma linha */
+    margin-left: 10px; /* Espaçamento ao lado do botão Gerar CSV */
+}
+
+.custom-file-upload:hover {
+    background-color: #357ab7;
+}
+
+input[type="file"] {
+    display: none; /* Esconde o input real */
+}
+
+
+
+button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #357ab7;
+}
+
+/* Estilo para a tabela de frases */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #4a90e2;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilo para o seletor de velocidade */
+label[for="audio-speed"] {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #555;
+}
+
+select#audio-speed {
+    width: auto;
+    padding: 8px;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    input, select, button {
+        font-size: 14px;
+    }
+}

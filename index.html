@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estude Inglês</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Estude Inglês</h1>
+    <div class="container">
+
+        <div class="input-section">
+            <label for="category-select">Categoria:</label>
+            <select id="category-select">
+                <!-- As opções de categoria serão preenchidas dinamicamente -->
+                <option value="" disabled selected>Selecione uma categoria</option>
+            </select>
+            
+            <button onclick="addCategory()">Cadastrar Categoria</button>
+            
+            <label for="phrase-pt">Frase em Português:</label>
+            <input type="text" id="phrase-pt" placeholder="Digite a frase">
+        
+            <label for="phrase-en">Tradução em Inglês:</label>
+            <input type="text" id="phrase-en" placeholder="Tradução automática" >
+        
+            <button onclick="acceptAndAddPhrase()">Aceitar e Adicionar</button>
+            <button onclick="translatePhrase()">Traduzir</button>
+
+        
+            <!-- Seletor de velocidade do áudio -->
+            <label for="audio-speed">Velocidade do Áudio:</label>
+            <select id="audio-speed">
+                <option value="0.5">0.5x</option>
+                <option value="0.75">0.75x</option>
+                <option value="1" selected>1x (Normal)</option>
+                <option value="1.25">1.25x</option>
+                <option value="1.5">1.5x</option>
+                <option value="1.75">1.75x</option>
+                <option value="2">2x</option>
+            </select>
+        </div>
+
+        
+
+        <div class="filter-section">
+            <label for="filter-category">Filtrar por Categoria:</label>
+            <select id="filter-category" onchange="filterPhrases()">
+                <option value="all">Todas</option>
+                <!-- As opções de categorias serão adicionadas dinamicamente -->
+            </select>
+        </div>
+
+        <h2>Frases Salvas</h2>
+        <table id="phrases-table">
+            <thead>
+                <tr>
+                    <th>Português</th>
+                    <th>Inglês</th>
+                    <th>Ouvir</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Exemplo inicial -->
+                <tr data-category="Saudação">
+                    <td>Olá, como você tem passado esses dias?</td>
+                    <td>Hello, how have you been these days?</td>
+                    <td><button onclick="playAudio('Hello, how have you been these days?')">Play</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="button-section">
+            <button onclick="generateCSV()">Gerar CSV</button>
+            <button onclick="saveToFileSystem()">Salvar CSV Atual</button>
+        
+            <label for="import-csv" class="custom-file-upload">
+                
+                Escolher Arquivo
+            </label>
+            <input type="file" id="import-csv" accept=".csv" onchange="importCSV(event)" style="display: none;">
+                   
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
